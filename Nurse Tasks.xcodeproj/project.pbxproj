@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D8078B292AFCA45B002B28DA /* Nurse_TasksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8078B282AFCA45B002B28DA /* Nurse_TasksApp.swift */; };
+		D8078B2B2AFCA45B002B28DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8078B2A2AFCA45B002B28DA /* ContentView.swift */; };
+		D8078B2D2AFCA45B002B28DA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8078B2C2AFCA45B002B28DA /* Item.swift */; };
+		D8078B2F2AFCA45E002B28DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8078B2E2AFCA45E002B28DA /* Assets.xcassets */; };
+		D8078B322AFCA45E002B28DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8078B312AFCA45E002B28DA /* Preview Assets.xcassets */; };
+		D8078B3C2AFCA45F002B28DA /* Nurse_TasksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8078B3B2AFCA45F002B28DA /* Nurse_TasksTests.swift */; };
+		D8078B462AFCA45F002B28DA /* Nurse_TasksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8078B452AFCA45F002B28DA /* Nurse_TasksUITests.swift */; };
+		D8078B482AFCA45F002B28DA /* Nurse_TasksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8078B472AFCA45F002B28DA /* Nurse_TasksUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D8078B382AFCA45F002B28DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8078B1D2AFCA45A002B28DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8078B242AFCA45B002B28DA;
+			remoteInfo = "Nurse Tasks";
+		};
+		D8078B422AFCA45F002B28DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8078B1D2AFCA45A002B28DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8078B242AFCA45B002B28DA;
+			remoteInfo = "Nurse Tasks";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D8078B252AFCA45B002B28DA /* Nurse Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nurse Tasks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8078B282AFCA45B002B28DA /* Nurse_TasksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nurse_TasksApp.swift; sourceTree = "<group>"; };
+		D8078B2A2AFCA45B002B28DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D8078B2C2AFCA45B002B28DA /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		D8078B2E2AFCA45E002B28DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D8078B312AFCA45E002B28DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D8078B372AFCA45F002B28DA /* Nurse TasksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nurse TasksTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8078B3B2AFCA45F002B28DA /* Nurse_TasksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nurse_TasksTests.swift; sourceTree = "<group>"; };
+		D8078B412AFCA45F002B28DA /* Nurse TasksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nurse TasksUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8078B452AFCA45F002B28DA /* Nurse_TasksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nurse_TasksUITests.swift; sourceTree = "<group>"; };
+		D8078B472AFCA45F002B28DA /* Nurse_TasksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nurse_TasksUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8078B222AFCA45B002B28DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8078B342AFCA45F002B28DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8078B3E2AFCA45F002B28DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D8078B1C2AFCA45A002B28DA = {
+			isa = PBXGroup;
+			children = (
+				D8078B272AFCA45B002B28DA /* Nurse Tasks */,
+				D8078B3A2AFCA45F002B28DA /* Nurse TasksTests */,
+				D8078B442AFCA45F002B28DA /* Nurse TasksUITests */,
+				D8078B262AFCA45B002B28DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8078B262AFCA45B002B28DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8078B252AFCA45B002B28DA /* Nurse Tasks.app */,
+				D8078B372AFCA45F002B28DA /* Nurse TasksTests.xctest */,
+				D8078B412AFCA45F002B28DA /* Nurse TasksUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8078B272AFCA45B002B28DA /* Nurse Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				D8078B282AFCA45B002B28DA /* Nurse_TasksApp.swift */,
+				D8078B2A2AFCA45B002B28DA /* ContentView.swift */,
+				D8078B2C2AFCA45B002B28DA /* Item.swift */,
+				D8078B2E2AFCA45E002B28DA /* Assets.xcassets */,
+				D8078B302AFCA45E002B28DA /* Preview Content */,
+			);
+			path = "Nurse Tasks";
+			sourceTree = "<group>";
+		};
+		D8078B302AFCA45E002B28DA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D8078B312AFCA45E002B28DA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D8078B3A2AFCA45F002B28DA /* Nurse TasksTests */ = {
+			isa = PBXGroup;
+			children = (
+				D8078B3B2AFCA45F002B28DA /* Nurse_TasksTests.swift */,
+			);
+			path = "Nurse TasksTests";
+			sourceTree = "<group>";
+		};
+		D8078B442AFCA45F002B28DA /* Nurse TasksUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D8078B452AFCA45F002B28DA /* Nurse_TasksUITests.swift */,
+				D8078B472AFCA45F002B28DA /* Nurse_TasksUITestsLaunchTests.swift */,
+			);
+			path = "Nurse TasksUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D8078B242AFCA45B002B28DA /* Nurse Tasks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8078B4B2AFCA45F002B28DA /* Build configuration list for PBXNativeTarget "Nurse Tasks" */;
+			buildPhases = (
+				D8078B212AFCA45B002B28DA /* Sources */,
+				D8078B222AFCA45B002B28DA /* Frameworks */,
+				D8078B232AFCA45B002B28DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Nurse Tasks";
+			productName = "Nurse Tasks";
+			productReference = D8078B252AFCA45B002B28DA /* Nurse Tasks.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D8078B362AFCA45F002B28DA /* Nurse TasksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8078B4E2AFCA45F002B28DA /* Build configuration list for PBXNativeTarget "Nurse TasksTests" */;
+			buildPhases = (
+				D8078B332AFCA45F002B28DA /* Sources */,
+				D8078B342AFCA45F002B28DA /* Frameworks */,
+				D8078B352AFCA45F002B28DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8078B392AFCA45F002B28DA /* PBXTargetDependency */,
+			);
+			name = "Nurse TasksTests";
+			productName = "Nurse TasksTests";
+			productReference = D8078B372AFCA45F002B28DA /* Nurse TasksTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D8078B402AFCA45F002B28DA /* Nurse TasksUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8078B512AFCA45F002B28DA /* Build configuration list for PBXNativeTarget "Nurse TasksUITests" */;
+			buildPhases = (
+				D8078B3D2AFCA45F002B28DA /* Sources */,
+				D8078B3E2AFCA45F002B28DA /* Frameworks */,
+				D8078B3F2AFCA45F002B28DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8078B432AFCA45F002B28DA /* PBXTargetDependency */,
+			);
+			name = "Nurse TasksUITests";
+			productName = "Nurse TasksUITests";
+			productReference = D8078B412AFCA45F002B28DA /* Nurse TasksUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8078B1D2AFCA45A002B28DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					D8078B242AFCA45B002B28DA = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					D8078B362AFCA45F002B28DA = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = D8078B242AFCA45B002B28DA;
+					};
+					D8078B402AFCA45F002B28DA = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = D8078B242AFCA45B002B28DA;
+					};
+				};
+			};
+			buildConfigurationList = D8078B202AFCA45A002B28DA /* Build configuration list for PBXProject "Nurse Tasks" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D8078B1C2AFCA45A002B28DA;
+			productRefGroup = D8078B262AFCA45B002B28DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8078B242AFCA45B002B28DA /* Nurse Tasks */,
+				D8078B362AFCA45F002B28DA /* Nurse TasksTests */,
+				D8078B402AFCA45F002B28DA /* Nurse TasksUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D8078B232AFCA45B002B28DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8078B322AFCA45E002B28DA /* Preview Assets.xcassets in Resources */,
+				D8078B2F2AFCA45E002B28DA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8078B352AFCA45F002B28DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8078B3F2AFCA45F002B28DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8078B212AFCA45B002B28DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8078B2B2AFCA45B002B28DA /* ContentView.swift in Sources */,
+				D8078B2D2AFCA45B002B28DA /* Item.swift in Sources */,
+				D8078B292AFCA45B002B28DA /* Nurse_TasksApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8078B332AFCA45F002B28DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8078B3C2AFCA45F002B28DA /* Nurse_TasksTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8078B3D2AFCA45F002B28DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8078B462AFCA45F002B28DA /* Nurse_TasksUITests.swift in Sources */,
+				D8078B482AFCA45F002B28DA /* Nurse_TasksUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D8078B392AFCA45F002B28DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8078B242AFCA45B002B28DA /* Nurse Tasks */;
+			targetProxy = D8078B382AFCA45F002B28DA /* PBXContainerItemProxy */;
+		};
+		D8078B432AFCA45F002B28DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8078B242AFCA45B002B28DA /* Nurse Tasks */;
+			targetProxy = D8078B422AFCA45F002B28DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D8078B492AFCA45F002B28DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D8078B4A2AFCA45F002B28DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D8078B4C2AFCA45F002B28DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Nurse Tasks/Preview Content\"";
+				DEVELOPMENT_TEAM = 25479K3D85;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryandraper.Nurse-Tasks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D8078B4D2AFCA45F002B28DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Nurse Tasks/Preview Content\"";
+				DEVELOPMENT_TEAM = 25479K3D85;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryandraper.Nurse-Tasks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D8078B4F2AFCA45F002B28DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25479K3D85;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryandraper.Nurse-TasksTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nurse Tasks.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Nurse Tasks";
+			};
+			name = Debug;
+		};
+		D8078B502AFCA45F002B28DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25479K3D85;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryandraper.Nurse-TasksTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nurse Tasks.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Nurse Tasks";
+			};
+			name = Release;
+		};
+		D8078B522AFCA45F002B28DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25479K3D85;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryandraper.Nurse-TasksUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Nurse Tasks";
+			};
+			name = Debug;
+		};
+		D8078B532AFCA45F002B28DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25479K3D85;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryandraper.Nurse-TasksUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Nurse Tasks";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8078B202AFCA45A002B28DA /* Build configuration list for PBXProject "Nurse Tasks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8078B492AFCA45F002B28DA /* Debug */,
+				D8078B4A2AFCA45F002B28DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8078B4B2AFCA45F002B28DA /* Build configuration list for PBXNativeTarget "Nurse Tasks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8078B4C2AFCA45F002B28DA /* Debug */,
+				D8078B4D2AFCA45F002B28DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8078B4E2AFCA45F002B28DA /* Build configuration list for PBXNativeTarget "Nurse TasksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8078B4F2AFCA45F002B28DA /* Debug */,
+				D8078B502AFCA45F002B28DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8078B512AFCA45F002B28DA /* Build configuration list for PBXNativeTarget "Nurse TasksUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8078B522AFCA45F002B28DA /* Debug */,
+				D8078B532AFCA45F002B28DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D8078B1D2AFCA45A002B28DA /* Project object */;
+}
