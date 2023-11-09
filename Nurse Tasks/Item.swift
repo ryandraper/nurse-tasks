@@ -11,8 +11,9 @@ import SwiftData
 @Model
 final class Item {
     var timestamp: Date
-    
+    var assignedTo: String
     init(timestamp: Date) {
         self.timestamp = timestamp
+        self.assignedTo = NSFullUserName()
     }
 }
