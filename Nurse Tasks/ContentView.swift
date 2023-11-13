@@ -26,13 +26,23 @@ struct ContentView: View {
                 .onDelete(perform: deleteItems)
             }
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+//                ToolbarItem(placement: .navigationBarTrailing) {
+//                    EditButton()
+//                }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    HStack{
+                        Button(action: addItem) {
+                            HStack{
+                                Image(systemName: "plus.circle.fill")
+                                Text("Add Task")
+                            }
+                            //Label("Add Item", systemImage: "plus")
+                        }
+                        Spacer()
+                        EditButton()
                     }
+
+                    
                 }
             }
         } detail: {
