@@ -11,20 +11,9 @@ public struct Task:Codable{
     var assignedTo : String
     var location: Address
     var startTime, endTime: Date
-    var taskTitle, notes, type: String
+    var taskTitle, notes, type: String //type for either personal or work task
     var status: String  //whether the task is completed
-    
-    init(clientName: String, assignedTo: String, location: Address, startTime: Date, endTime: Date, taskTitle: String, notes: String, type: String, status: String) {
-        self.clientName = clientName
-        self.assignedTo = assignedTo
-        self.location = location
-        self.startTime = startTime
-        self.endTime = endTime
-        self.taskTitle = taskTitle
-        self.notes = notes
-        self.type = type
-        self.status = status
-    }
+    var reminderEnabled: Bool
     
     static let allTasks:[Task] = Bundle.main.decode(file: "data.json")
     //static let allLocations:[Address] = Bundle.main.decode(file: <#T##String#>)

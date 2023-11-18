@@ -21,14 +21,15 @@
     },
     "taskTitle": "task1",
     "notes":"",
-    "type":"type1",
-    "status":"completed"
+    "type":"work",
+    "status":"completed",
+    "reminderEnabled":false
 },{
-    "clientName": "client1",
-    "assignedTo":"Nurse1",
+    "clientName": "",
+    "assignedTo":"",
     "location": {
-        "street":"ABC St",
-        "city":"Burnaby"
+        "street":"",
+        "city":""
     },
     "startTime":{
         "year":"2023",
@@ -46,8 +47,9 @@
     },
     "taskTitle": "task2",
     "notes":"some notes...",
-    "type":"type1",
-    "status":"on working"
+    "type":"personal",
+    "status":"on working",
+    "reminderEnabled":true
 },
 {
     "clientName": "client2",
@@ -72,8 +74,9 @@
     },
     "taskTitle": "task3",
     "notes":"",
-    "type":"type2",
-    "status":"on working"
+    "type":"work",
+    "status":"completed",
+    "reminderEnabled":false
 },
 {
     "clientName": "client2",
@@ -98,8 +101,9 @@
     },
     "taskTitle": "task4",
     "notes":"",
-    "type":"type2",
-    "status":"not start"
+    "type":"work",
+    "status":"not start",
+    "reminderEnabled":true
 },
 {
     "clientName": "client3",
@@ -125,7 +129,35 @@
     "taskTitle": "task5",
     "notes":"",
     "type":"type3",
-    "status":"completed"
+    "status":"completed",
+    "reminderEnabled":false
+},
+{
+    "clientName": "",
+    "assignedTo":"",
+    "location": {
+        "street":"",
+        "city":""
+    },
+    "startTime":{
+        "year":"2023",
+        "month":"11",
+        "day":"17",
+        "hour":"12",
+        "mintue":"00"
+    },
+    "endTime":{
+        "year":"2023",
+        "month":"12",
+        "day":"10",
+        "hour":"15",
+        "mintue":"00"
+    },
+    "taskTitle": "task6",
+    "notes":"some notes...",
+    "type":"personal",
+    "status":"on working",
+    "reminderEnabled":true
 }
 ]
 
