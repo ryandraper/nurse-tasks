@@ -11,6 +11,13 @@ import SwiftData
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
+    
+//    @State var personalTasks: [Task]
+//    @State var workTasks: [Task]
+    @State private var shouldShowActionSheet = false
+    @State private var creatingPersonalTask = false
+    @State private var creatingWorkTask = false
+    @State private var navigateTo: AnyView?
 
     var body: some View {
         NavigationSplitView {
@@ -25,36 +32,37 @@ struct ContentView: View {
                 }
                 .onDelete(perform: deleteItems)
             }
+            
             .toolbar {
-//                ToolbarItem(placement: .navigationBarTrailing) {
-//                    EditButton()
-//                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    EditButton()
+                }
                 ToolbarItem(placement: .navigationBarLeading) {
                     HStack{
-                        Button(action: addItem) {
-                            HStack{
-                                Image(systemName: "plus.circle.fill")
-                                Text("Add Task")
+                        Menu{
+                            NavigationLink(destination: PersonalTaskView(), isActive: $creatingPersonalTask) {
+                                EmptyView()
+                                Label("Add Personal Task", systemImage: "doc")
                             }
-                            //Label("Add Item", systemImage: "plus")
+                            NavigationLink(destination: WorkTaskView(), isActive: $creatingWorkTask) {
+                                EmptyView()
+                                Label("Add Work Task", systemImage: "doc")
+                            }
                         }
-//                        Spacer()
-//                        EditButton()
+                        label: {
+    //                            Image(systemName: "plus.circle.fill")
+    //                            Text("Add Task")
+                            Label("Add Task", systemImage: "plus.circle.fill")
+                        }
                     }
-
                     
                 }
             }
+            
         } detail: {
             Text("Select an item")
         }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
+        
     }
 
     private func deleteItems(offsets: IndexSet) {
@@ -67,6 +75,7 @@ struct ContentView: View {
 }
 
 #Preview {
+//    ContentView(personalTasks: <#[Task]#>, workTasks: <#[Task]#>)
     ContentView()
         .modelContainer(for: Item.self, inMemory: true)
         .environment(\.colorScheme, .dark)
