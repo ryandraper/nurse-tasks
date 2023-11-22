@@ -10,7 +10,9 @@ import SwiftData
 
 @main
 struct Nurse_TasksApp: App {
+    /*
     var sharedModelContainer: ModelContainer = {
+        
         let schema = Schema([
             Item.self,
         ])
@@ -21,12 +23,12 @@ struct Nurse_TasksApp: App {
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
         }
-    }()
+    }()*/
 
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(sharedModelContainer)
+        //.modelContainer(sharedModelContainer)
     }
 }

@@ -9,54 +9,36 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+    private var task:[Task] = Task.allTasks
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                        Text("Assigned to: \(item.assignedTo)")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
+        NavigationView{
+            List{
+                ForEach(task, id:\.taskTitle){task in NavigationLink(destination: DetailTaskView(task: task)){
+                    VStack(alignment: .leading, content: {
+                        Text("\(task.taskTitle)").bold()
+                        Text("\(task.assignedTo)").foregroundStyle(.gray)
+                    })
+                }.padding(6)
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
+            }.navigationTitle("Tasks")
+            .toolbar{
+                ToolbarItem(placement:.navigationBarTrailing){
+                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                        NavigationLink(destination: AddTaskView()){
+                            Text("Add")
+                        }
+                    })
                 }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
             }
         }
     }
 }
 
-#Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+struct ContentView_Previews:
+    PreviewProvider{
+    static var previews: some View{
+        ContentView()
+    }
 }
+
+      
