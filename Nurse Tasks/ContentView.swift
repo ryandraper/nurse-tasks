@@ -19,26 +19,26 @@ struct ContentView: View {
                         Text("\(task.assignedTo)").foregroundStyle(.gray)
                     })
                 }.padding(6)
-                }
-            }.navigationTitle("Tasks")
-            .toolbar{
-                ToolbarItem(placement:.navigationBarTrailing){
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                        NavigationLink(destination: AddTaskView()){
-                            Text("Add")
+                }.navigationTitle("Tasks")
+                    .toolbar{
+                        ToolbarItem(placement:.navigationBarTrailing){
+                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                                NavigationLink(destination: AddTaskView()){
+                                    Text("Add")
+                                }
+                            })
                         }
-                    })
-                }
+                        
+                    }
             }
         }
     }
 }
-
 struct ContentView_Previews:
     PreviewProvider{
     static var previews: some View{
         ContentView()
     }
+    
 }
-
       
