@@ -10,10 +10,8 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    private var nurseTask: [NurseTask] = NurseTask.allNurseTask
     
-//    @State var personalTasks: [Task]
-//    @State var workTasks: [Task]
     @State private var shouldShowActionSheet = false
     @State private var creatingPersonalTask = false
     @State private var creatingWorkTask = false
@@ -22,21 +20,22 @@ struct ContentView: View {
     var body: some View {
         NavigationSplitView {
             List {
-                ForEach(items) { item in
+                ForEach(nurseTask, id: \.assignedTo) { task in
                     NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                        Text("Assigned to: \(item.assignedTo)")
+                        Text("\(task.taskTitle)")
+                        // Text("Item at \(task.endTime, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                        Text("Assigned to: \(task.assignedTo)")
                     } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                      //  Text("\(task.endTime, format: Date.FormatStyle(date: .numeric, time: .standard))")
                     }
                 }
-                .onDelete(perform: deleteItems)
+//                .onDelete(perform: deleteItems)
             }
             
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
+//                ToolbarItem(placement: .navigationBarTrailing) {
+//                    EditButton()
+//                }
                 ToolbarItem(placement: .navigationBarLeading) {
                     HStack{
                         Menu{
@@ -65,13 +64,13 @@ struct ContentView: View {
         
     }
 
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
-    }
+//    private func deleteItems(offsets: IndexSet) {
+//        withAnimation {
+//            for index in offsets {
+//                modelContext.delete(nurseTask[index])
+//            }
+//        }
+//    }
 }
 
 #Preview {

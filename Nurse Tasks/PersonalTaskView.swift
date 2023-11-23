@@ -47,10 +47,6 @@ struct PersonalTaskView: View {
     }
     
     private func addTask () {
-//        withAnimation {
-//            contentView.personalTasks.append(Task(title: self.title, details: self.details, dueDate: self.showDates, date: self.selectedDate, type: taskType.personal, assignedTo: "John Doe"))
-//            
-//        }
     }
 }
 

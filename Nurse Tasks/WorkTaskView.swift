@@ -23,7 +23,6 @@ struct WorkTaskView: View {
                         TextField("Title", text: $title)
                         TextField("Details", text: $details, axis: .vertical)
                             .lineLimit(10, reservesSpace: true)
-                 
                     }
                     Section {
                         Toggle("Reminder", isOn: $showDates)
