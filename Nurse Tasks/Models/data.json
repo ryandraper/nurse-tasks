@@ -1,4 +1,5 @@
 [{
+    "id":"7b4d1445-9036-496a-967d-d1a44c11a168",
     "clientName": "client1",
     "assignedTo":"Nurse1",
     "location": {
@@ -21,10 +22,11 @@
     },
     "taskTitle": "task1",
     "notes":"",
-    "type":"work",
-    "status":"completed",
+    "type":false,
+    "status":true,
     "reminderEnabled":false
 },{
+    "id":"51f8f347-eaf8-42de-9f94-828905dbe2d4",
     "clientName": "",
     "assignedTo":"",
     "location": {
@@ -47,11 +49,12 @@
     },
     "taskTitle": "task2",
     "notes":"some notes...",
-    "type":"personal",
-    "status":"on working",
+    "type":false,
+    "status":false,
     "reminderEnabled":true
 },
 {
+    "id":"1a5eb958-85ee-4ebf-bf59-da5858c72a4b",
     "clientName": "client2",
     "assignedTo":"Nurse2",
     "location": {
@@ -74,11 +77,12 @@
     },
     "taskTitle": "task3",
     "notes":"",
-    "type":"work",
-    "status":"completed",
+    "type":false,
+    "status":true,
     "reminderEnabled":false
 },
 {
+    "id":"e980b466-17d5-4230-b86c-ed0a7ec08105",
     "clientName": "client2",
     "assignedTo":"Nurse2",
     "location": {
@@ -101,11 +105,12 @@
     },
     "taskTitle": "task4",
     "notes":"",
-    "type":"work",
-    "status":"not start",
+    "type":false,
+    "status":false,
     "reminderEnabled":true
 },
 {
+    "id":"8aa84821-e35f-45dd-8875-9f38963acdae",
     "clientName": "client3",
     "assignedTo":"Nurse3",
     "location": {
@@ -128,11 +133,12 @@
     },
     "taskTitle": "task5",
     "notes":"",
-    "type":"type3",
-    "status":"completed",
+    "type":false,
+    "status":true,
     "reminderEnabled":false
 },
 {
+    "id":"27cd8af3-28bb-41ab-b877-2fc4a1cae53f",
     "clientName": "",
     "assignedTo":"",
     "location": {
@@ -155,10 +161,9 @@
     },
     "taskTitle": "task6",
     "notes":"some notes...",
-    "type":"personal",
-    "status":"on working",
+    "type":true,
+    "status":false,
     "reminderEnabled":true
 }
 ]
-
  
