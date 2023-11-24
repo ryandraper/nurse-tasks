@@ -21,21 +21,22 @@ struct ContentView: View {
         NavigationSplitView {
             List {
                 ForEach(nurseTask, id: \.assignedTo) { task in
-                    NavigationLink {
+                    NavigationLink{
                         Text("\(task.taskTitle)")
-                        // Text("Item at \(task.endTime, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                        Text("Assigned to: \(task.assignedTo)")
+                        Text("\(task.assignedTo)")
+                        Text("\(task.notes)")
+                        Text("\(task.status)")
                     } label: {
-                      //  Text("\(task.endTime, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                        Text("\(task.taskTitle)")
                     }
                 }
 //                .onDelete(perform: deleteItems)
             }
             
             .toolbar {
-//                ToolbarItem(placement: .navigationBarTrailing) {
-//                    EditButton()
-//                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    EditButton()
+              }
                 ToolbarItem(placement: .navigationBarLeading) {
                     HStack{
                         Menu{
