@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		566C8E332B0F255600179427 /* nurseTask.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 566C8E322B0F255600179427 /* nurseTask.JSON */; };
 		566C8E352B0F25AD00179427 /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566C8E342B0F25AD00179427 /* JSONManager.swift */; };
+		9E245D372B1041170076D6BE /* nurseTask.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E245D362B1041170076D6BE /* nurseTask.json */; };
 		9E52121D2B08128000ACB792 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E52121C2B08128000ACB792 /* Task.swift */; };
 		9E52121F2B08181800ACB792 /* PersonalTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E52121E2B08181800ACB792 /* PersonalTaskView.swift */; };
 		9E5212212B081FDA00ACB792 /* WorkTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5212202B081FDA00ACB792 /* WorkTaskView.swift */; };
@@ -40,8 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		566C8E322B0F255600179427 /* nurseTask.JSON */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = nurseTask.JSON; sourceTree = "<group>"; };
 		566C8E342B0F25AD00179427 /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
+		9E245D362B1041170076D6BE /* nurseTask.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = nurseTask.json; path = ../../../../Desktop/nurseTask.json; sourceTree = "<group>"; };
 		9E52121C2B08128000ACB792 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		9E52121E2B08181800ACB792 /* PersonalTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalTaskView.swift; sourceTree = "<group>"; };
 		9E5212202B081FDA00ACB792 /* WorkTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTaskView.swift; sourceTree = "<group>"; };
@@ -121,8 +121,8 @@
 		D8078B302AFCA45E002B28DA /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				9E245D362B1041170076D6BE /* nurseTask.json */,
 				D8078B312AFCA45E002B28DA /* Preview Assets.xcassets */,
-				566C8E322B0F255600179427 /* nurseTask.JSON */,
 				566C8E342B0F25AD00179427 /* JSONManager.swift */,
 			);
 			path = "Preview Content";
@@ -250,7 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8078B322AFCA45E002B28DA /* Preview Assets.xcassets in Resources */,
-				566C8E332B0F255600179427 /* nurseTask.JSON in Resources */,
+				9E245D372B1041170076D6BE /* nurseTask.json in Resources */,
 				D8078B2F2AFCA45E002B28DA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
