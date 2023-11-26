@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		D8078B292AFCA45B002B28DA /* Nurse_TasksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8078B282AFCA45B002B28DA /* Nurse_TasksApp.swift */; };
 		D8078B2B2AFCA45B002B28DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8078B2A2AFCA45B002B28DA /* ContentView.swift */; };
-		D8078B2D2AFCA45B002B28DA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8078B2C2AFCA45B002B28DA /* Item.swift */; };
 		D8078B2F2AFCA45E002B28DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8078B2E2AFCA45E002B28DA /* Assets.xcassets */; };
 		D8078B322AFCA45E002B28DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8078B312AFCA45E002B28DA /* Preview Assets.xcassets */; };
 		D8078B3C2AFCA45F002B28DA /* Nurse_TasksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8078B3B2AFCA45F002B28DA /* Nurse_TasksTests.swift */; };
 		D8078B462AFCA45F002B28DA /* Nurse_TasksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8078B452AFCA45F002B28DA /* Nurse_TasksUITests.swift */; };
 		D8078B482AFCA45F002B28DA /* Nurse_TasksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8078B472AFCA45F002B28DA /* Nurse_TasksUITestsLaunchTests.swift */; };
+		EA08BA6E2B06DAF80038EDCF /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = EA08BA6D2B06DAF80038EDCF /* data.json */; };
+		EA08BA702B06DE830038EDCF /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08BA6F2B06DE830038EDCF /* TaskModel.swift */; };
+		EA08BAA92B06EDF50038EDCF /* DetailTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08BAA82B06EDF50038EDCF /* DetailTaskView.swift */; };
+		EA08BAAB2B06FE310038EDCF /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08BAAA2B06FE310038EDCF /* AddTaskView.swift */; };
+		EABD08DF2B0F871800BA0D78 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABD08DE2B0F871800BA0D78 /* TaskViewModel.swift */; };
+		EABD08E12B10073300BA0D78 /* RemindManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABD08E02B10073300BA0D78 /* RemindManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +43,6 @@
 		D8078B252AFCA45B002B28DA /* Nurse Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nurse Tasks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8078B282AFCA45B002B28DA /* Nurse_TasksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nurse_TasksApp.swift; sourceTree = "<group>"; };
 		D8078B2A2AFCA45B002B28DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D8078B2C2AFCA45B002B28DA /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		D8078B2E2AFCA45E002B28DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8078B312AFCA45E002B28DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D8078B372AFCA45F002B28DA /* Nurse TasksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nurse TasksTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +50,12 @@
 		D8078B412AFCA45F002B28DA /* Nurse TasksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nurse TasksUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8078B452AFCA45F002B28DA /* Nurse_TasksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nurse_TasksUITests.swift; sourceTree = "<group>"; };
 		D8078B472AFCA45F002B28DA /* Nurse_TasksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nurse_TasksUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EA08BA6D2B06DAF80038EDCF /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		EA08BA6F2B06DE830038EDCF /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		EA08BAA82B06EDF50038EDCF /* DetailTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTaskView.swift; sourceTree = "<group>"; };
+		EA08BAAA2B06FE310038EDCF /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		EABD08DE2B0F871800BA0D78 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		EABD08E02B10073300BA0D78 /* RemindManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +107,9 @@
 			isa = PBXGroup;
 			children = (
 				D8078B282AFCA45B002B28DA /* Nurse_TasksApp.swift */,
-				D8078B2A2AFCA45B002B28DA /* ContentView.swift */,
-				D8078B2C2AFCA45B002B28DA /* Item.swift */,
+				EABD08DA2B0F6D9100BA0D78 /* Models */,
+				EABD08DD2B0F86D500BA0D78 /* ViewModels */,
+				EABD08D92B0F6D7B00BA0D78 /* Views */,
 				D8078B2E2AFCA45E002B28DA /* Assets.xcassets */,
 				D8078B302AFCA45E002B28DA /* Preview Content */,
 			);
@@ -128,6 +139,34 @@
 				D8078B472AFCA45F002B28DA /* Nurse_TasksUITestsLaunchTests.swift */,
 			);
 			path = "Nurse TasksUITests";
+			sourceTree = "<group>";
+		};
+		EABD08D92B0F6D7B00BA0D78 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D8078B2A2AFCA45B002B28DA /* ContentView.swift */,
+				EA08BAA82B06EDF50038EDCF /* DetailTaskView.swift */,
+				EA08BAAA2B06FE310038EDCF /* AddTaskView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EABD08DA2B0F6D9100BA0D78 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA08BA6F2B06DE830038EDCF /* TaskModel.swift */,
+				EA08BA6D2B06DAF80038EDCF /* data.json */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EABD08DD2B0F86D500BA0D78 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EABD08E02B10073300BA0D78 /* RemindManager.swift */,
+				EABD08DE2B0F871800BA0D78 /* TaskViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8078B322AFCA45E002B28DA /* Preview Assets.xcassets in Resources */,
+				EA08BA6E2B06DAF80038EDCF /* data.json in Resources */,
 				D8078B2F2AFCA45E002B28DA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,8 +300,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EABD08E12B10073300BA0D78 /* RemindManager.swift in Sources */,
+				EA08BA702B06DE830038EDCF /* TaskModel.swift in Sources */,
+				EABD08DF2B0F871800BA0D78 /* TaskViewModel.swift in Sources */,
 				D8078B2B2AFCA45B002B28DA /* ContentView.swift in Sources */,
-				D8078B2D2AFCA45B002B28DA /* Item.swift in Sources */,
+				EA08BAAB2B06FE310038EDCF /* AddTaskView.swift in Sources */,
+				EA08BAA92B06EDF50038EDCF /* DetailTaskView.swift in Sources */,
 				D8078B292AFCA45B002B28DA /* Nurse_TasksApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

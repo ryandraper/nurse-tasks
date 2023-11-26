@@ -8,6 +8,7 @@
 import Foundation
 import SwiftData
 
+/*
 @Model
 final class Item {
     var timestamp: Date
@@ -17,3 +18,8 @@ final class Item {
         self.assignedTo = NSFullUserName()
     }
 }
+*/
+
+
+
+
