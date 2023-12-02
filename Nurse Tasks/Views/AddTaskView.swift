@@ -69,7 +69,7 @@ struct AddTaskView: View {
     
     func addNewTask(){
         //ContentView(newtask: task)
-        /*newTask = Task(clientName: task.clientName, assignedTo: task.assignedTo, street:task.location.street,city:task.location.city, startTime: StringDate(date: startT), endTime: StringDate(date: endT), taskTile: task.taskTitle, notes: task.notes, reminderEnable: task.reminderEnabled, status: task.status, type: task.type)
+        /*newTask = Task(clientName: task.clientName, assignedTo: task.assignedTo, street:task.location.street,city:task.location.city, startTime: StringDate(date: startT), endTime: StringDate(date: endT), taskTitle: task.taskTitle, notes: task.notes, reminderEnable: task.reminderEnabled, status: task.status, type: task.type)
         tasks.append(newTask)*/
     }
     func writeJSON(tasks: [TaskModel]) {
@@ -85,7 +85,7 @@ struct AddTaskView: View {
     }
     func saveBtnPressed(){
         
-        taskViewModel.addTask(id:id, clientName: clientName, assignedTo: assignedTo, street: street, city: city, startTime: startT, endTime: endT, taskTile: taskTitle, notes: notes, reminderEnable: reminderEnabled, status: status, type: type)
+        taskViewModel.addTask(id:id, clientName: clientName, assignedTo: assignedTo, street: street, city: city, startTime: startT, endTime: endT, taskTitle: taskTitle, notes: notes, reminderEnable: reminderEnabled, status: status, type: type)
         
         presentationMode.wrappedValue.dismiss()
     }

@@ -35,7 +35,7 @@ struct ContentView: View {
         }
     }
     /*@State var tasks:[TaskModel] = [
-        TaskModel(clientName: "client1", assignedTo: "nurse1", street: "ABC St", city: "Burnaby", startTime: StringDate(date: Date()), endTime: StringDate(date: Date()), taskTile: "task1", notes: "some notes..", reminderEnable: true, status: false, type: false)
+        TaskModel(clientName: "client1", assignedTo: "nurse1", street: "ABC St", city: "Burnaby", startTime: StringDate(date: Date()), endTime: StringDate(date: Date()), taskTitle: "task1", notes: "some notes..", reminderEnable: true, status: false, type: false)
     ]*/
     
     var body: some View {
@@ -82,7 +82,7 @@ struct ContentView: View {
         }
         
     }
-    private func filteredTaskItems()->[TaskModel]{
+    func filteredTaskItems()->[TaskModel]{
         let date = Date()
         let calendar = Calendar.current
         let hour = calendar.component(.hour, from: date) + 1
