@@ -37,10 +37,10 @@ class TaskViewModel: ObservableObject{
         tasks.remove(atOffsets: offsets)
     }
     
-    func addTask(id: String, clientName: String, assignedTo: String, street:String,city:String, startTime: Date, endTime: Date, taskTile: String, notes: String, reminderEnable: Bool, status: Bool, type: Bool){
+    func addTask(id: String, clientName: String, assignedTo: String, street:String,city:String, startTime: Date, endTime: Date, taskTitle: String, notes: String, reminderEnable: Bool, status: Bool, type: Bool){
         let sT = StringDate(date: startTime)
         let eT = StringDate(date: endTime)
-        let newTask = TaskModel(id: id, clientName: clientName, assignedTo: assignedTo, street: street, city: city, startTime: sT, endTime: eT, taskTile: taskTile, notes: notes, reminderEnable: reminderEnable, status: status, type: type)
+        let newTask = TaskModel(id: id, clientName: clientName, assignedTo: assignedTo, street: street, city: city, startTime: sT, endTime: eT, taskTitle: taskTitle, notes: notes, reminderEnable: reminderEnable, status: status, type: type)
         if(reminderEnable){
             //RemindManager.instance.scheduleNotification(title: "first", subtitle: "test")
         }

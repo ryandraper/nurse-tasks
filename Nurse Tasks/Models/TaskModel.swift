@@ -6,7 +6,13 @@
 //
 
 import Foundation
-struct TaskModel:Identifiable,Codable{
+struct TaskModel:Identifiable,Codable,Equatable{
+    static func == (lhs: TaskModel, rhs: TaskModel) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    
+    
     var id:String
     var clientName: String
     var assignedTo : String
@@ -34,12 +40,12 @@ struct TaskModel:Identifiable,Codable{
         endTime = StringDate(date:currentdate)
     }
     
-    init(clientName:String, assignedTo:String,street: String,city:String,startTime:StringDate,endTime:StringDate,taskTile:String,notes:String,reminderEnable:Bool,status:Bool,type:Bool){
+    init(clientName:String, assignedTo:String,street: String,city:String,startTime:StringDate,endTime:StringDate,taskTitle:String,notes:String,reminderEnable:Bool,status:Bool,type:Bool){
         id = UUID().uuidString
         self.clientName = clientName
         self.assignedTo = assignedTo
         location = Address(street: street, city:city)
-        self.taskTitle = taskTile
+        self.taskTitle = taskTitle
         self.notes = notes
         self.type = type
         self.status = status
@@ -49,12 +55,12 @@ struct TaskModel:Identifiable,Codable{
         
     }
     
-    init(id:String = UUID().uuidString, clientName:String, assignedTo:String,street: String,city:String,startTime:StringDate,endTime:StringDate,taskTile:String,notes:String,reminderEnable:Bool,status:Bool,type:Bool){
+    init(id:String = UUID().uuidString, clientName:String, assignedTo:String,street: String,city:String,startTime:StringDate,endTime:StringDate,taskTitle:String,notes:String,reminderEnable:Bool,status:Bool,type:Bool){
         self.id = id
         self.clientName = clientName
         self.assignedTo = assignedTo
         location = Address(street: street, city:city)
-        self.taskTitle = taskTile
+        self.taskTitle = taskTitle
         self.notes = notes
         self.type = type
         self.status = status
@@ -69,7 +75,7 @@ struct TaskModel:Identifiable,Codable{
         }else{
             
         }
-        return TaskModel(id: id, clientName: clientName, assignedTo: assignedTo, street:location.street, city: location.city, startTime: startTime, endTime: endTime, taskTile: taskTitle, notes: notes, reminderEnable: reminderEnabled, status: status, type: type)
+        return TaskModel(id: id, clientName: clientName, assignedTo: assignedTo, street:location.street, city: location.city, startTime: startTime, endTime: endTime, taskTitle: taskTitle, notes: notes, reminderEnable: reminderEnabled, status: status, type: type)
     }
 }
 

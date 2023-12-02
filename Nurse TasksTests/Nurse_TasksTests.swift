@@ -10,27 +10,158 @@ import XCTest
 
 final class Nurse_TasksTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testFilterPersonalTask() {
+        //Given
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-DD HH:mm:ss"
+        let firstDate = dateFormatter.date(from: "2023-11-20 18:00") ?? Date()
+        let endDate = dateFormatter.date(from: "2023-11-20 18:30") ?? Date()
+        let nurseViewModel: TaskViewModel = TaskViewModel()
+        let contentView: ContentView = ContentView()
+        nurseViewModel.tasks.removeAll()
+        let id1 = UUID().uuidString
+        let id2 = UUID().uuidString
+        
+        nurseViewModel.addTask(id: id1, clientName:"John Doe", assignedTo:"Jane Doe", street:"ABC St", city:"Vancouver",startTime: firstDate, endTime: endDate, taskTitle: "Help Nurse Gerald with patient", notes:"Patient needs to be treated with a very calm demeanor.", reminderEnable: false, status:false, type:false)
+        nurseViewModel.addTask(id: id2, clientName:"Jack Doe", assignedTo:"Phillips Doe", street:"ABC St", city:"Vancouver",startTime: firstDate, endTime: endDate, taskTitle: "Help Nurse John with patient", notes:"Patient doesn't like vegetables.", reminderEnable: false, status:false, type:true)
+        
+        //When
+        contentView.selectedFilter = TaskFilter.Personal
+        contentView.taskViewModel.tasks = nurseViewModel.tasks
+        print(contentView)
+        
+        //Then
+        let expectedResult = [
+            TaskModel(id: id2, clientName:"Jack Doe", assignedTo:"Phillips Doe", street:"ABC St", city:"Vancouver",startTime: StringDate(date:firstDate), endTime: StringDate(date:endDate), taskTitle: "Help Nurse John with patient", notes:"Patient doesn't like vegetables.", reminderEnable: false, status:false, type:true)
+        ]
+        
+        print(contentView.filteredTaskItems())
+        XCTAssertEqual(contentView.filteredTaskItems(), expectedResult)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testFilterWorkTask() {
+        //Given
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-DD HH:mm:ss"
+        let firstDate = dateFormatter.date(from: "2023-11-20 18:00") ?? Date()
+        let endDate = dateFormatter.date(from: "2023-11-20 18:30") ?? Date()
+        let nurseViewModel: TaskViewModel = TaskViewModel()
+        let contentView: ContentView = ContentView()
+        nurseViewModel.tasks.removeAll()
+        let id1 = UUID().uuidString
+        let id2 = UUID().uuidString
+        
+        nurseViewModel.addTask(id: id1, clientName:"John Doe", assignedTo:"Jane Doe", street:"ABC St", city:"Vancouver",startTime: firstDate, endTime: endDate, taskTitle: "Help Nurse Gerald with patient", notes:"Patient needs to be treated with a very calm demeanor.", reminderEnable: false, status:false, type:false)
+        nurseViewModel.addTask(id: id2, clientName:"Jack Doe", assignedTo:"Phillips Doe", street:"ABC St", city:"Vancouver",startTime: firstDate, endTime: endDate, taskTitle: "Help Nurse John with patient", notes:"Patient doesn't like vegetables.", reminderEnable: false, status:false, type:true)
+        
+        //When
+        contentView.selectedFilter = TaskFilter.Work
+        contentView.taskViewModel.tasks = nurseViewModel.tasks
+        print(contentView)
+        
+        //Then
+        let expectedResult = [
+            TaskModel(id: id1, clientName:"Jack Doe", assignedTo:"Phillips Doe", street:"ABC St", city:"Vancouver",startTime: StringDate(date:firstDate), endTime: StringDate(date:endDate), taskTitle: "Help Nurse John with patient", notes:"Patient doesn't like vegetables.", reminderEnable: false, status:false, type:false)
+        ]
+        
+        print(contentView.filteredTaskItems())
+        XCTAssertEqual(contentView.filteredTaskItems(), expectedResult)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func testAddTask() {
+        //Given
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-DD HH:mm:ss"
+        let firstDate = dateFormatter.date(from: "2023-11-20 18:00") ?? Date()
+        let endDate = dateFormatter.date(from: "2023-11-20 18:30") ?? Date()
+        let nurseViewModel: TaskViewModel = TaskViewModel()
+        nurseViewModel.tasks.removeAll()
+        let id1 = UUID().uuidString
+        let id2 = UUID().uuidString
+        
+        nurseViewModel.addTask(id: id1, clientName:"John Doe", assignedTo:"Jane Doe", street:"ABC St", city:"Vancouver",startTime: firstDate, endTime: endDate, taskTitle: "Help Nurse Gerald with patient", notes:"Patient needs to be treated with a very calm demeanor.", reminderEnable: false, status:false, type:false)
+        nurseViewModel.addTask(id: id2, clientName:"Jack Doe", assignedTo:"Phillips Doe", street:"ABC St", city:"Vancouver",startTime: firstDate, endTime: endDate, taskTitle: "Help Nurse John with patient", notes:"Patient doesn't like vegetables.", reminderEnable: false, status:false, type:true)
+        
+        //When
+        var size = nurseViewModel.tasks.count
+        print("Before AddTask:", size)
+        nurseViewModel.addTask(id: UUID().uuidString, clientName:"Jack Doe", assignedTo:"Phillips Doe", street:"ABC St", city:"Vancouver",startTime: firstDate, endTime: endDate, taskTitle: "Help Nurse John with patient", notes:"Patient doesn't like vegetables.", reminderEnable: false, status:false, type:true)
+        
+        //Then
+        let expectedResult = size + 1
+        size = nurseViewModel.tasks.count
+        print("After AddTask:", size)
+        
+        XCTAssertEqual(size, expectedResult)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testAddPersonalTask() {
+        //Given
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-DD HH:mm:ss"
+        let firstDate = dateFormatter.date(from: "2023-11-20 18:00") ?? Date()
+        let endDate = dateFormatter.date(from: "2023-11-20 18:30") ?? Date()
+        let nurseViewModel: TaskViewModel = TaskViewModel()
+        nurseViewModel.tasks.removeAll()
+        let id = UUID().uuidString
+        
+        //When
+        nurseViewModel.addTask(id: id, clientName:"Jack Doe", assignedTo:"Phillips Doe", street:"ABC St", city:"Vancouver",startTime: firstDate, endTime: endDate, taskTitle: "Help Nurse John with patient", notes:"Patient doesn't like vegetables.", reminderEnable: false, status:false, type:true)
+        
+        //Then
+        let expectedResult = [
+            TaskModel(id: id, clientName:"Jack Doe", assignedTo:"Phillips Doe", street:"ABC St", city:"Vancouver",startTime: StringDate(date: firstDate), endTime: StringDate(date: endDate), taskTitle: "Help Nurse John with patient", notes:"Patient doesn't like vegetables.", reminderEnable: false, status:false, type:true)
+        ]
+        XCTAssertEqual(nurseViewModel.tasks, expectedResult)
+        
     }
-
+    
+    func testAddWorkTask() {
+        //Given
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-DD HH:mm:ss"
+        let firstDate = dateFormatter.date(from: "2023-11-20 18:00") ?? Date()
+        let endDate = dateFormatter.date(from: "2023-11-20 18:30") ?? Date()
+        let nurseViewModel: TaskViewModel = TaskViewModel()
+        nurseViewModel.tasks.removeAll()
+        let id = UUID().uuidString
+    
+        //When
+        nurseViewModel.addTask(id: id, clientName:"John Doe", assignedTo:"Jane Doe", street:"ABC St", city:"Vancouver",startTime: firstDate, endTime: endDate, taskTitle: "Help Nurse Gerald with patient", notes:"Patient needs to be treated with a very calm demeanor.", reminderEnable: false, status:false, type:false)
+        
+        //Then
+        let expectedResult = [
+            TaskModel(id: id, clientName:"John Doe", assignedTo:"Jane Doe", street:"ABC St", city:"Vancouver",startTime: StringDate(date:firstDate), endTime: StringDate(date:endDate), taskTitle: "Help Nurse Gerald with patient", notes:"Patient needs to be treated with a very calm demeanor.", reminderEnable: false, status:false, type:false)
+        ]
+        XCTAssertEqual(nurseViewModel.tasks, expectedResult)
+    }
+    
+    func testDeleteTask() {
+        //Given
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-DD HH:mm:ss"
+        let firstDate = dateFormatter.date(from: "2023-11-20 18:00") ?? Date()
+        let endDate = dateFormatter.date(from: "2023-11-20 18:30") ?? Date()
+        let nurseViewModel: TaskViewModel = TaskViewModel()
+        nurseViewModel.tasks.removeAll()
+        let id1 = UUID().uuidString
+        let id2 = UUID().uuidString
+        
+        nurseViewModel.addTask(id: id1, clientName:"John Doe", assignedTo:"Jane Doe", street:"ABC St", city:"Vancouver",startTime: firstDate, endTime: endDate, taskTitle: "Help Nurse Gerald with patient", notes:"Patient needs to be treated with a very calm demeanor.", reminderEnable: false, status:false, type:false)
+        nurseViewModel.addTask(id: id2, clientName:"Jack Doe", assignedTo:"Phillips Doe", street:"ABC St", city:"Vancouver",startTime: firstDate, endTime: endDate, taskTitle: "Help Nurse John with patient", notes:"Patient doesn't like vegetables.", reminderEnable: false, status:false, type:true)
+        nurseViewModel.addTask(id: UUID().uuidString, clientName:"Jack Doe", assignedTo:"Phillips Doe", street:"ABC St", city:"Vancouver",startTime: firstDate, endTime: endDate, taskTitle: "Help Nurse John with patient", notes:"Patient doesn't like vegetables.", reminderEnable: false, status:false, type:true)
+        
+        //When
+        var size = nurseViewModel.tasks.count
+        print("Current Size: ", size)
+        nurseViewModel.tasks.remove(at: size - 1)
+        
+        //Then
+        let expectedResult = size - 1
+        size = nurseViewModel.tasks.count
+        print("After Delete Task:", size)
+        
+        XCTAssertEqual(size, expectedResult)
+    }
+    
 }
